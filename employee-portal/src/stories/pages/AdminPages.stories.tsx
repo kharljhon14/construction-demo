@@ -32,6 +32,7 @@ import { AdminProjectDetail } from '../../pages/admin/ProjectDetail'
 import { AdminEmployees } from '../../pages/admin/Employees'
 import { AdminPayslip } from '../../pages/admin/Payslip'
 import { AdminTimesheets } from '../../pages/admin/Timesheets'
+import { AdminTimesheetDetail } from '../../pages/admin/TimesheetDetail'
 import { AdminLogs } from '../../pages/admin/Logs'
 import { AdminContacts } from '../../pages/admin/Contacts'
 
@@ -200,6 +201,16 @@ export const Timesheets: Story = {
     <AdminShell path="/admin/timesheets">
       <AdminTimesheets />
     </AdminShell>
+  ),
+}
+
+export const TimesheetDetail: Story = {
+  render: () => (
+    <AdminShellRoute
+      initialEntry="/admin/timesheets/TS-2401"
+      routePath="/admin/timesheets/:id"
+      element={<AdminTimesheetDetail />}
+    />
   ),
 }
 

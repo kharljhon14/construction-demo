@@ -25,6 +25,7 @@ import { AdminProjectDetail } from './pages/admin/ProjectDetail'
 import { AdminEmployees } from './pages/admin/Employees'
 import { AdminPayslip } from './pages/admin/Payslip'
 import { AdminTimesheets } from './pages/admin/Timesheets'
+import { AdminTimesheetDetail } from './pages/admin/TimesheetDetail'
 import { AdminLogs } from './pages/admin/Logs'
 import { AdminContacts } from './pages/admin/Contacts'
 
@@ -59,6 +60,7 @@ const App = () => {
           <Route path="progress" element={<AdminProgress />} />
           <Route path="payslip" element={<AdminPayslip />} />
           <Route path="timesheets" element={<AdminTimesheets />} />
+          <Route path="timesheets/:id" element={<AdminTimesheetDetail />} />
           <Route path="logs" element={<AdminLogs />} />
           <Route path="contacts" element={<AdminContacts />} />
           <Route path="generate" element={<AdminGenerate />} />

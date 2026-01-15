@@ -8,6 +8,50 @@ export const timesheets = [
     hours: 46,
     overtime: 6,
     status: 'Submitted',
+    entries: [
+      {
+        date: 'Jan 14, 2026',
+        timeIn: {
+          time: '8:02 AM',
+          location: 'Skyline Tower Gate A',
+          coords: '14.5547, 121.0244',
+        },
+        timeOut: {
+          date: 'Jan 14, 2026',
+          time: '5:58 PM',
+          location: 'Skyline Tower Gate A',
+          coords: '14.5545, 121.0241',
+        },
+      },
+      {
+        date: 'Jan 15, 2026',
+        timeIn: {
+          time: '8:11 AM',
+          location: 'Skyline Tower Gate B',
+          coords: '14.5551, 121.0249',
+        },
+        timeOut: {
+          date: 'Jan 15, 2026',
+          time: '6:07 PM',
+          location: 'Skyline Tower Gate A',
+          coords: '14.5546, 121.0242',
+        },
+      },
+      {
+        date: 'Jan 16, 2026',
+        timeIn: {
+          time: '7:58 AM',
+          location: 'Skyline Tower Gate A',
+          coords: '14.5548, 121.0243',
+        },
+        timeOut: {
+          date: 'Jan 16, 2026',
+          time: '5:55 PM',
+          location: 'Skyline Tower Gate A',
+          coords: '14.5547, 121.0240',
+        },
+      },
+    ],
   },
   {
     id: 'TS-2394',
@@ -18,6 +62,50 @@ export const timesheets = [
     hours: 42,
     overtime: 2,
     status: 'Pending',
+    entries: [
+      {
+        date: 'Jan 14, 2026',
+        timeIn: {
+          time: '8:17 AM',
+          location: 'Harbor Residences Gate 2',
+          coords: '14.5922, 121.0106',
+        },
+        timeOut: {
+          date: 'Jan 14, 2026',
+          time: '6:09 PM',
+          location: 'Harbor Residences Gate 2',
+          coords: '14.5920, 121.0102',
+        },
+      },
+      {
+        date: 'Jan 15, 2026',
+        timeIn: {
+          time: '8:06 AM',
+          location: 'Harbor Residences Admin Tent',
+          coords: '14.5925, 121.0109',
+        },
+        timeOut: {
+          date: 'Jan 15, 2026',
+          time: '6:03 PM',
+          location: 'Harbor Residences Gate 2',
+          coords: '14.5921, 121.0104',
+        },
+      },
+      {
+        date: 'Jan 16, 2026',
+        timeIn: {
+          time: '8:08 AM',
+          location: 'Harbor Residences Gate 1',
+          coords: '14.5918, 121.0101',
+        },
+        timeOut: {
+          date: 'Jan 16, 2026',
+          time: '5:51 PM',
+          location: 'Harbor Residences Gate 1',
+          coords: '14.5917, 121.0099',
+        },
+      },
+    ],
   },
   {
     id: 'TS-2388',
@@ -28,6 +116,50 @@ export const timesheets = [
     hours: 40,
     overtime: 0,
     status: 'Approved',
+    entries: [
+      {
+        date: 'Jan 14, 2026',
+        timeIn: {
+          time: '8:01 AM',
+          location: 'Metro Warehouse Dock A',
+          coords: '14.5633, 121.0348',
+        },
+        timeOut: {
+          date: 'Jan 14, 2026',
+          time: '5:44 PM',
+          location: 'Metro Warehouse Dock A',
+          coords: '14.5630, 121.0345',
+        },
+      },
+      {
+        date: 'Jan 15, 2026',
+        timeIn: {
+          time: '8:05 AM',
+          location: 'Metro Warehouse Dock B',
+          coords: '14.5636, 121.0351',
+        },
+        timeOut: {
+          date: 'Jan 15, 2026',
+          time: '5:52 PM',
+          location: 'Metro Warehouse Dock B',
+          coords: '14.5632, 121.0347',
+        },
+      },
+      {
+        date: 'Jan 16, 2026',
+        timeIn: {
+          time: '7:59 AM',
+          location: 'Metro Warehouse Admin Office',
+          coords: '14.5638, 121.0353',
+        },
+        timeOut: {
+          date: 'Jan 16, 2026',
+          time: '5:49 PM',
+          location: 'Metro Warehouse Dock B',
+          coords: '14.5634, 121.0349',
+        },
+      },
+    ],
   },
 ]
 

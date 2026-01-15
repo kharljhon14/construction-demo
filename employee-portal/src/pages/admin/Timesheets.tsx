@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Badge } from '../../components/ui/Badge'
 import { Button } from '../../components/ui/Button'
 import { Card } from '../../components/ui/Card'
@@ -26,7 +27,7 @@ export const AdminTimesheets = () => {
     <div className="space-y-6">
       <PageHeader
         title="Timesheets"
-        description="Review weekly timesheets and export payroll summaries."
+        description="Review weekly timesheets, punches, and export payroll summaries."
         action={
           <div className="flex flex-wrap gap-2">
             <Button variant="secondary" onClick={() => setToast('CSV export started')}>
@@ -64,6 +65,7 @@ export const AdminTimesheets = () => {
             <TableHeaderCell>Hours</TableHeaderCell>
             <TableHeaderCell>Overtime</TableHeaderCell>
             <TableHeaderCell>Status</TableHeaderCell>
+            <TableHeaderCell>Entries</TableHeaderCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -89,6 +91,13 @@ export const AdminTimesheets = () => {
                 >
                   {sheet.status}
                 </Badge>
+              </TableCell>
+              <TableCell>
+                <Link to={`/admin/timesheets/${sheet.id}`}>
+                  <Button variant="ghost" size="sm">
+                    View punches
+                  </Button>
+                </Link>
               </TableCell>
             </TableRow>
           ))}

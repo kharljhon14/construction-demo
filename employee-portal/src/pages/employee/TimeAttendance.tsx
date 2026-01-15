@@ -21,6 +21,7 @@ const logs = [
 
 export const EmployeeTimeAttendance = () => {
   const [timedIn, setTimedIn] = useState(true)
+  const [locationAllowed, setLocationAllowed] = useState(false)
 
   return (
     <div className="space-y-6">
@@ -32,6 +33,16 @@ export const EmployeeTimeAttendance = () => {
             <Badge variant={timedIn ? 'approved' : 'pending'}>
               {timedIn ? 'Timed in' : 'Not timed in'}
             </Badge>
+            <Badge variant={locationAllowed ? 'approved' : 'pending'}>
+              {locationAllowed ? 'Location enabled' : 'Location required'}
+            </Badge>
+            <Button
+              variant="secondary"
+              onClick={() => setLocationAllowed(true)}
+              disabled={locationAllowed}
+            >
+              Allow location
+            </Button>
             <Button variant="secondary">Request adjustment</Button>
           </div>
         }
@@ -39,6 +50,14 @@ export const EmployeeTimeAttendance = () => {
 
       <div className="grid gap-6 lg:grid-cols-[2fr_1fr]">
         <Card title="Today's Shift" description="Wednesday, Jan 15 • 9:00 AM - 6:00 PM">
+          {!locationAllowed && (
+            <div className="rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-700">
+              <p className="font-semibold text-amber-900">Location access required</p>
+              <p className="text-xs text-amber-700">
+                Enable location to clock in, clock out, and record geotagged entries.
+              </p>
+            </div>
+          )}
           <div className="mt-4 flex flex-wrap items-center gap-4">
             <div className="rounded-2xl border border-slate-100 bg-white px-4 py-3">
               <p className="text-xs text-slate-500">Current status</p>
@@ -56,11 +75,19 @@ export const EmployeeTimeAttendance = () => {
             </div>
           </div>
           <div className="mt-6 flex flex-wrap gap-3">
-            <Button onClick={() => setTimedIn(true)}>Time in</Button>
-            <Button variant="secondary" onClick={() => setTimedIn(false)}>
+            <Button onClick={() => setTimedIn(true)} disabled={!locationAllowed}>
+              Time in
+            </Button>
+            <Button
+              variant="secondary"
+              onClick={() => setTimedIn(false)}
+              disabled={!locationAllowed}
+            >
               Time out
             </Button>
-            <Button variant="ghost">Start break</Button>
+            <Button variant="ghost" disabled={!locationAllowed}>
+              Start break
+            </Button>
           </div>
         </Card>
 
